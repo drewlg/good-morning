@@ -25,9 +25,9 @@ __author__ = 'eward'
 LOGGER = getLogger(__name__)
 
 
-class HelloWorldSkill(MycroftSkill):
+class GoodMorningSkill(MycroftSkill):
     def __init__(self):
-        super(HelloWorldSkill, self).__init__(name="HelloWorldSkill")
+        super(GoodMorning, self).__init__(name="GoodMorningSkill")
 
     def initialize(self):
         thank_you_intent = IntentBuilder("ThankYouIntent"). \
@@ -39,7 +39,7 @@ class HelloWorldSkill(MycroftSkill):
         self.register_intent(how_are_you_intent,
                              self.handle_how_are_you_intent)
 
-        hello_world_intent = IntentBuilder("HelloWorldIntent"). \
+        good_morning_intent = IntentBuilder("HelloWorldIntent"). \
             require("HelloWorldKeyword").build()
         self.register_intent(hello_world_intent,
                              self.handle_hello_world_intent)
@@ -50,8 +50,8 @@ class HelloWorldSkill(MycroftSkill):
     def handle_how_are_you_intent(self, message):
         self.speak_dialog("how.are.you")
 
-    def handle_hello_world_intent(self, message):
-        self.speak_dialog("hello.world")
+    def handle_good_morning_intent(self, message):
+        self.speak_dialog("good.morning")
 
     def stop(self):
         pass
