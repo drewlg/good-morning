@@ -39,10 +39,10 @@ class GoodMorningSkill(MycroftSkill):
         self.register_intent(how_are_you_intent,
                              self.handle_how_are_you_intent)
 
-        good_morning_intent = IntentBuilder("HelloWorldIntent"). \
-            require("HelloWorldKeyword").build()
-        self.register_intent(hello_world_intent,
-                             self.handle_hello_world_intent)
+        good_morning_intent = IntentBuilder("GoodMorningIntent"). \
+            require("GoodMorningKeyword").build()
+        self.register_intent(good_morning_intent,
+                             self.good_morning_intent)
 
     def handle_thank_you_intent(self, message):
         self.speak_dialog("welcome")
@@ -58,4 +58,4 @@ class GoodMorningSkill(MycroftSkill):
 
 
 def create_skill():
-    return HelloWorldSkill()
+    return GoodMorningSkill()
