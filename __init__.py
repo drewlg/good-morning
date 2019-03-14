@@ -27,7 +27,7 @@ LOGGER = getLogger(__name__)
 
 class GoodMorningSkill(MycroftSkill):
     def __init__(self):
-        super(GoodMorning, self).__init__(name="GoodMorningSkill")
+        super(GoodMorningSkill, self).__init__(name="GoodMorningSkill")
 
     def initialize(self):
         thank_you_intent = IntentBuilder("ThankYouIntent"). \
