@@ -1,7 +1,7 @@
 {
-  "utterance": "Hello world",
-  "intent_type": "HelloWorldIntent",
+  "utterance": "Good Morning",
+  "intent_type": "GoodMorningIntent",
   "intent": {
-    "HelloWorldKeyword": "hello world"
+    "HelloWorldKeyword": "good morning"
   }
 }
