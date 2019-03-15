@@ -2,6 +2,6 @@
   "utterance": "Good Morning",
   "intent_type": "GoodMorningIntent",
   "intent": {
-    "GoodMorning": "good morning"
+    "GoodMorningKeyword": "good morning agamoatto"
   }
 }
