@@ -42,7 +42,7 @@ class GoodMorningSkill(MycroftSkill):
         good_morning_intent = IntentBuilder("GoodMorningIntent"). \
             require("GoodMorningKeyword").build()
         self.register_intent(good_morning_intent,
-                             self.good_morning_intent)
+                             self.handle_good_morning_intent)
 
     def handle_thank_you_intent(self, message):
         self.speak_dialog("welcome")
