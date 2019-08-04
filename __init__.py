@@ -15,15 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with Mycroft Core.  If not, see <http://www.gnu.org/licenses/>.
 
-from adapt.intent import IntentBuilder
+from datetime import datetime
 
-from mycroft.skills.core import MycroftSkill
-from mycroft.util.log import getLogger
-
-__author__ = 'eward'
+__author__ = 'drewlg'
 
 LOGGER = getLogger(__name__)
-
 
 class GoodMorningSkill(MycroftSkill):
     def __init__(self):
@@ -44,14 +40,15 @@ class GoodMorningSkill(MycroftSkill):
         self.register_intent(good_morning_intent,
                              self.handle_good_morning_intent)
 
-    def handle_thank_you_intent(self, message):
-        self.speak_dialog("welcome")
-
     def handle_how_are_you_intent(self, message):
         self.speak_dialog("how.are.you")
 
-    def handle_good_morning_intent(self, message):
-        self.speak_dialog("good.morning")
+    if datetime.now() < datetime.time(17, 0, 0, 78915):
+        def handle_good_morning_intent(self, message):
+            self.speak_dialog("good.morning")
+    else:
+        def handle_good_morning_intent(self, message):
+            self.speak_dialog("good.evening")
 
     def stop(self):
         pass
