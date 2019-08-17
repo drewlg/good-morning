@@ -17,7 +17,7 @@
 
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
-from datetime import datetime
+import datetime
 
 __author__ = 'drewlg'
 
