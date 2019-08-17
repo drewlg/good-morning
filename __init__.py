@@ -19,8 +19,6 @@ from datetime import datetime
 
 __author__ = 'drewlg'
 
-LOGGER = getLogger(__name__)
-
 class GoodMorningSkill(MycroftSkill):
     def __init__(self):
         super(GoodMorningSkill, self).__init__(name="GoodMorningSkill")
