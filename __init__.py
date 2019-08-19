@@ -19,6 +19,8 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
 import datetime
 
+currentDT = datetime.datetime.now()
+
 __author__ = 'drewlg'
 
 class GoodMorningSkill(MycroftSkill):
@@ -43,7 +45,7 @@ class GoodMorningSkill(MycroftSkill):
     def handle_how_are_you_intent(self, message):
         self.speak_dialog("how.are.you")
 
-    if datetime.now() < datetime.time(17, 0, 0, 78915):
+    if currentDT  < datetime.time(17, 0, 0, 78915):
         def handle_good_morning_intent(self, message):
             self.speak_dialog("good.morning")
     else:
